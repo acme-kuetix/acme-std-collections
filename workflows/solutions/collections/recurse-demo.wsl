@@ -1,0 +1,39 @@
+// Demo workflow for TestCollectionsRecurse: builds a tree from persistence/store
+// collection "tree_nodes" (id, parentId, name). Calls collections/ops/ops.Recurse
+// with rootId=$json.rootId and childWorkflow="solutions/collections/tree-children".
+// Responds with the nested tree.
+
+module recurse_demo
+
+import collections/ops
+import services/common
+
+workflow recurse_demo {
+  start: BuildTree
+
+  state BuildTree {
+    action collections/ops/ops.Recurse(
+      rootId: $json.rootId,
+      childWorkflow: "solutions/collections/tree-children",
+      childField: "children"
+    ) as RecurseResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { tree: $RecurseResult.response.tree },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $RecurseResult.response.message??"recurse failed" },
+      statusCode: $RecurseResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

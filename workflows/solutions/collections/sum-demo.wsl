@@ -1,0 +1,39 @@
+// Demo workflow for TestCollectionsSum: calls collections/ops/ops.Sum on
+// $json.items with field "amount", then responds with the sum.
+//
+// Synthetic test to validate that Sum correctly sums a numeric field
+// across an array of maps.
+
+module sum_demo
+
+import collections/ops
+import services/common
+
+workflow sum_demo {
+  start: SumAmounts
+
+  state SumAmounts {
+    action collections/ops/ops.Sum(
+      arr: $json.items,
+      field: "amount"
+    ) as SumResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { sum: $SumResult.response.sum },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $SumResult.response.message??"sum failed" },
+      statusCode: $SumResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

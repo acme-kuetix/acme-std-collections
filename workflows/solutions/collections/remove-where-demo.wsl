@@ -1,0 +1,38 @@
+// Demo workflow for TestCollectionsRemoveWhere: calls
+// collections/ops/ops.RemoveWhere on $json.items with field "id" and
+// value $json.removeId, then responds with the filtered array.
+
+module remove_where_demo
+
+import collections/ops
+import services/common
+
+workflow remove_where_demo {
+  start: RemoveItem
+
+  state RemoveItem {
+    action collections/ops/ops.RemoveWhere(
+      arr: $json.items,
+      field: "id",
+      value: $json.removeId
+    ) as RemoveResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { arr: $RemoveResult.response.arr },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $RemoveResult.response.message??"remove failed" },
+      statusCode: $RemoveResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

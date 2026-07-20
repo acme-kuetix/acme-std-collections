@@ -1,0 +1,52 @@
+// Sub-workflow for collections/ops.Recurse: receives $nodeId, loads the node
+// from persistence/store collection "tree_nodes", then lists all nodes with
+// parentId == $nodeId. Responds with the node + its children array.
+// The Recurse primitive will then recursively process each child.
+
+module tree_children
+
+import persistence/store
+import services/common
+
+workflow tree_children {
+  start: LoadNode
+
+  state LoadNode {
+    action persistence/store/store.Get(
+      collection: "tree_nodes",
+      id: $nodeId
+    ) as NodeResult
+    on success -> LoadChildren
+    on error -> Failed
+  }
+
+  state LoadChildren {
+    action persistence/store/store.List(
+      collection: "tree_nodes",
+      filter: {parentId: $nodeId}
+    ) as ChildrenResult
+    on success -> Respond
+    on error -> Failed
+  }
+
+  state Respond {
+    action services/common/response.Response(
+      value: {
+        id: $NodeResult.response.doc.id,
+        name: $NodeResult.response.doc.name,
+        parentId: $NodeResult.response.doc.parentId,
+        children: $ChildrenResult.response.docs
+      },
+      statusCode: 200
+    ) as Result
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: "tree-children failed", nodeId: $nodeId },
+      statusCode: 500
+    ) as ErrorResult
+    end fail
+  }
+}

@@ -1,0 +1,37 @@
+// Demo workflow for TestCollectionsFilter: calls collections/ops/ops.Filter
+// on $json.items with the sub-workflow "solutions/collections/keep-active",
+// then responds with the filtered array (active items only).
+
+module filter_demo
+
+import collections/ops
+import services/common
+
+workflow filter_demo {
+  start: FilterItems
+
+  state FilterItems {
+    action collections/ops/ops.Filter(
+      arr: $json.items,
+      workflow: "solutions/collections/keep-active"
+    ) as FilterResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { results: $FilterResult.response.results },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $FilterResult.response.message??"filter failed" },
+      statusCode: $FilterResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

@@ -1,0 +1,41 @@
+// Demo workflow for TestCollectionsMap: calls collections/ops/ops.Map on
+// $json.items with the sub-workflow "solutions/collections/double-element",
+// then responds with the collected results.
+//
+// This is a synthetic test to validate that Map propagates $element to
+// the sub-workflow and collects the sub-workflow's response into a
+// results array.
+
+module map_demo
+
+import collections/ops
+import services/common
+
+workflow map_demo {
+  start: MapItems
+
+  state MapItems {
+    action collections/ops/ops.Map(
+      arr: $json.items,
+      workflow: "solutions/collections/double-element"
+    ) as MapResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { results: $MapResult.response.results },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $MapResult.response.message??"map failed" },
+      statusCode: $MapResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

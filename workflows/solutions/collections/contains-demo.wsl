@@ -1,0 +1,37 @@
+// Demo workflow for TestCollectionsContains: calls collections/ops/ops.Contains
+// on $json.items looking for field "id" == $json.target, responds with {contains: bool}.
+
+module contains_demo
+
+import collections/ops
+import services/common
+
+workflow contains_demo {
+  start: CheckContains
+
+  state CheckContains {
+    action collections/ops/ops.Contains(
+      arr: $json.items,
+      field: "id",
+      value: $json.target
+    ) as ContainsResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { contains: $ContainsResult.response.contains },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $ContainsResult.response.message??"contains failed" },
+      statusCode: $ContainsResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

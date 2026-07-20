@@ -1,0 +1,39 @@
+// Demo workflow for TestCollectionsReduce: calls collections/ops/ops.Reduce on
+// $json.items with sub-workflow "solutions/collections/sum-amount-reducer".
+// The reducer reads $element.amount and adds it to $accumulator.total.
+// init is {total: 0}. Final response is {total: <sum>}.
+
+module reduce_demo
+
+import collections/ops
+import services/common
+
+workflow reduce_demo {
+  start: ReduceItems
+
+  state ReduceItems {
+    action collections/ops/ops.Reduce(
+      arr: $json.items,
+      workflow: "solutions/collections/sum-amount-reducer",
+      init: {total: 0}
+    ) as ReduceResult
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { total: $ReduceResult.response.result.total },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $ReduceResult.response.message??"reduce failed" },
+      statusCode: $ReduceResult.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

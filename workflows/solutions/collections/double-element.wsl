@@ -1,0 +1,37 @@
+// Sub-workflow for TestCollectionsMap: reads $element, doubles it via
+// math/ops.Add, and responds with {doubled: <value>}. Called per-element
+// by collections/ops/ops.Map.
+
+module double_element
+
+import math/ops
+import services/common
+
+workflow double_element {
+  start: Double
+
+  state Double {
+    action math/ops/ops.Add(
+      a: $element,
+      b: $element
+    ) as Doubled
+    on success -> OK
+    on error -> Failed
+  }
+
+  state OK {
+    action services/common/response.Response(
+      value: { doubled: $Doubled.result },
+      statusCode: 200
+    ) as FinalResult
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: $Doubled.response.message??"double failed" },
+      statusCode: $Doubled.statusCode??500
+    ) as ErrorResult
+    end fail
+  }
+}

@@ -1,0 +1,1861 @@
+{
+  "collections/ops/ops": {
+    "info": {
+      "go_module": "github.com/acme-kuetix/acme-std-collections",
+      "namespace": "collections/ops",
+      "class": "ops",
+      "label": "Ops Module",
+      "description": "Handles ops operations for collections/ops service"
+    },
+    "methods": [
+      {
+        "value": "Append",
+        "label": "Append(arr interface{}, element interface{}) (r domain.FlowStepResult)",
+        "names": "Append(arr, element) r",
+        "types": "Append(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Append",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "element"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "AssertFound",
+        "label": "AssertFound(found bool, doc interface{}, code string, message string) (r domain.FlowStepResult)",
+        "names": "AssertFound(found, doc, code, message) r",
+        "types": "AssertFound(bool, interface{}, string, string) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "AssertFound",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "bool",
+            "interface{}",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "found",
+            "doc",
+            "code",
+            "message"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "BuildValuationRow",
+        "label": "BuildValuationRow(productId interface{}, sku interface{}, name interface{}, qty interface{}, unitCost interface{}, totalValue interface{}) (r domain.FlowStepResult)",
+        "names": "BuildValuationRow(productId, sku, name, qty, unitCost, totalValue) r",
+        "types": "BuildValuationRow(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "BuildValuationRow",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "productId",
+            "sku",
+            "name",
+            "qty",
+            "unitCost",
+            "totalValue"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Contains",
+        "label": "Contains(arr interface{}, field string, value interface{}) (r domain.FlowStepResult)",
+        "names": "Contains(arr, field, value) r",
+        "types": "Contains(interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Contains",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "ContainsValue",
+        "label": "ContainsValue(arr interface{}, value interface{}) (r domain.FlowStepResult)",
+        "names": "ContainsValue(arr, value) r",
+        "types": "ContainsValue(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "ContainsValue",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "EnrichValuationRows",
+        "label": "EnrichValuationRows(rows interface{}, products interface{}) (r domain.FlowStepResult)",
+        "names": "EnrichValuationRows(rows, products) r",
+        "types": "EnrichValuationRows(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "EnrichValuationRows",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "rows",
+            "products"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Filter",
+        "label": "Filter(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Filter(p, arr, workflow) r",
+        "types": "Filter(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Filter",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Find",
+        "label": "Find(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Find(p, arr, workflow) r",
+        "types": "Find(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Find",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "FlatMap",
+        "label": "FlatMap(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "FlatMap(p, arr, workflow) r",
+        "types": "FlatMap(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "FlatMap",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetAtIndex",
+        "label": "GetAtIndex(arr interface{}, idx interface{}) (r domain.FlowStepResult)",
+        "names": "GetAtIndex(arr, idx) r",
+        "types": "GetAtIndex(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetAtIndex",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "idx"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetField",
+        "label": "GetField(doc interface{}, field string) (r domain.FlowStepResult)",
+        "names": "GetField(doc, field) r",
+        "types": "GetField(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetField",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "doc",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetNestedPath",
+        "label": "GetNestedPath(doc interface{}, path string) (r domain.FlowStepResult)",
+        "names": "GetNestedPath(doc, path) r",
+        "types": "GetNestedPath(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetNestedPath",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "doc",
+            "path"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumBucket",
+        "label": "GroupSumBucket(arr interface{}, groupField string, groupLabelField string, bucketField string, bucketCount int, sumField string) (r domain.FlowStepResult)",
+        "names": "GroupSumBucket(arr, groupField, groupLabelField, bucketField, bucketCount, sumField) r",
+        "types": "GroupSumBucket(interface{}, string, string, string, int, string) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumBucket",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "int",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "groupField",
+            "groupLabelField",
+            "bucketField",
+            "bucketCount",
+            "sumField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumMatrix",
+        "label": "GroupSumMatrix(arr interface{}, rowField string, rowLabelField string, colField string, colLabelField string, sumField string) (r domain.FlowStepResult)",
+        "names": "GroupSumMatrix(arr, rowField, rowLabelField, colField, colLabelField, sumField) r",
+        "types": "GroupSumMatrix(interface{}, string, string, string, string, string) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumMatrix",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "rowField",
+            "rowLabelField",
+            "colField",
+            "colLabelField",
+            "sumField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumMulti",
+        "label": "GroupSumMulti(arr interface{}, groupField string, groupLabelField string, sumFields interface{}) (r domain.FlowStepResult)",
+        "names": "GroupSumMulti(arr, groupField, groupLabelField, sumFields) r",
+        "types": "GroupSumMulti(interface{}, string, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumMulti",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "groupField",
+            "groupLabelField",
+            "sumFields"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Length",
+        "label": "Length(arr interface{}) (r domain.FlowStepResult)",
+        "names": "Length(arr) r",
+        "types": "Length(interface{}) domain.FlowStepResult",
+        "description": "Function with 1 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Length",
+          "receiver_type": "*opsTransitions",
+          "num_in": 1,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "LimitOrAll",
+        "label": "LimitOrAll(arr interface{}, n interface{}) (r domain.FlowStepResult)",
+        "names": "LimitOrAll(arr, n) r",
+        "types": "LimitOrAll(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "LimitOrAll",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "n"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "MakeMap",
+        "label": "MakeMap(keys []interface{}, values []interface{}) (r domain.FlowStepResult)",
+        "names": "MakeMap(keys, values) r",
+        "types": "MakeMap([]interface{}, []interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "MakeMap",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "[]interface{}",
+            "[]interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "keys",
+            "values"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Map",
+        "label": "Map(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Map(p, arr, workflow) r",
+        "types": "Map(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Map",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Sum",
+        "label": "Sum(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "Sum(arr, field) r",
+        "types": "Sum(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Sum",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Map",
+        "label": "Map(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Map(p, arr, workflow) r",
+        "types": "Map(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Map",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Filter",
+        "label": "Filter(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Filter(p, arr, workflow) r",
+        "types": "Filter(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Filter",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "FlatMap",
+        "label": "FlatMap(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "FlatMap(p, arr, workflow) r",
+        "types": "FlatMap(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "FlatMap",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Append",
+        "label": "Append(arr interface{}, element interface{}) (r domain.FlowStepResult)",
+        "names": "Append(arr, element) r",
+        "types": "Append(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Append",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "element"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "RemoveWhere",
+        "label": "RemoveWhere(arr interface{}, field string, value interface{}) (r domain.FlowStepResult)",
+        "names": "RemoveWhere(arr, field, value) r",
+        "types": "RemoveWhere(interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "RemoveWhere",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Contains",
+        "label": "Contains(arr interface{}, field string, value interface{}) (r domain.FlowStepResult)",
+        "names": "Contains(arr, field, value) r",
+        "types": "Contains(interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Contains",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "ContainsValue",
+        "label": "ContainsValue(arr interface{}, value interface{}) (r domain.FlowStepResult)",
+        "names": "ContainsValue(arr, value) r",
+        "types": "ContainsValue(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "ContainsValue",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Reduce",
+        "label": "Reduce(p *wf.WorkerSessionContext, arr interface{}, workflow string, init interface{}) (r domain.FlowStepResult)",
+        "names": "Reduce(p, arr, workflow, init) r",
+        "types": "Reduce(*wf.WorkerSessionContext, interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Reduce",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow",
+            "init"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Recurse",
+        "label": "Recurse(p *wf.WorkerSessionContext, rootId string, childWorkflow string, childField string) (r domain.FlowStepResult)",
+        "names": "Recurse(p, rootId, childWorkflow, childField) r",
+        "types": "Recurse(*wf.WorkerSessionContext, string, string, string) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Recurse",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "rootId",
+            "childWorkflow",
+            "childField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SelectMostRecentDated",
+        "label": "SelectMostRecentDated(arr interface{}, dateField string, targetDate string, useCurrent bool) (r domain.FlowStepResult)",
+        "names": "SelectMostRecentDated(arr, dateField, targetDate, useCurrent) r",
+        "types": "SelectMostRecentDated(interface{}, string, string, bool) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SelectMostRecentDated",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "bool"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "dateField",
+            "targetDate",
+            "useCurrent"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "AssertFound",
+        "label": "AssertFound(found bool, doc interface{}, code string, message string) (r domain.FlowStepResult)",
+        "names": "AssertFound(found, doc, code, message) r",
+        "types": "AssertFound(bool, interface{}, string, string) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "AssertFound",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "bool",
+            "interface{}",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "found",
+            "doc",
+            "code",
+            "message"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SortBy",
+        "label": "SortBy(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "SortBy(arr, field) r",
+        "types": "SortBy(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SortBy",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SortByDesc",
+        "label": "SortByDesc(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "SortByDesc(arr, field) r",
+        "types": "SortByDesc(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SortByDesc",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "LimitOrAll",
+        "label": "LimitOrAll(arr interface{}, n interface{}) (r domain.FlowStepResult)",
+        "names": "LimitOrAll(arr, n) r",
+        "types": "LimitOrAll(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "LimitOrAll",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "n"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Length",
+        "label": "Length(arr interface{}) (r domain.FlowStepResult)",
+        "names": "Length(arr) r",
+        "types": "Length(interface{}) domain.FlowStepResult",
+        "description": "Function with 1 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Length",
+          "receiver_type": "*opsTransitions",
+          "num_in": 1,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetAtIndex",
+        "label": "GetAtIndex(arr interface{}, idx interface{}) (r domain.FlowStepResult)",
+        "names": "GetAtIndex(arr, idx) r",
+        "types": "GetAtIndex(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetAtIndex",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "idx"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetField",
+        "label": "GetField(doc interface{}, field string) (r domain.FlowStepResult)",
+        "names": "GetField(doc, field) r",
+        "types": "GetField(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetField",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "doc",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "MakeMap",
+        "label": "MakeMap(keys []interface{}, values []interface{}) (r domain.FlowStepResult)",
+        "names": "MakeMap(keys, values) r",
+        "types": "MakeMap([]interface{}, []interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "MakeMap",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "[]interface{}",
+            "[]interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "keys",
+            "values"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "BuildValuationRow",
+        "label": "BuildValuationRow(productId interface{}, sku interface{}, name interface{}, qty interface{}, unitCost interface{}, totalValue interface{}) (r domain.FlowStepResult)",
+        "names": "BuildValuationRow(productId, sku, name, qty, unitCost, totalValue) r",
+        "types": "BuildValuationRow(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "BuildValuationRow",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "productId",
+            "sku",
+            "name",
+            "qty",
+            "unitCost",
+            "totalValue"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "EnrichValuationRows",
+        "label": "EnrichValuationRows(rows interface{}, products interface{}) (r domain.FlowStepResult)",
+        "names": "EnrichValuationRows(rows, products) r",
+        "types": "EnrichValuationRows(interface{}, interface{}) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "EnrichValuationRows",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "rows",
+            "products"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GetNestedPath",
+        "label": "GetNestedPath(doc interface{}, path string) (r domain.FlowStepResult)",
+        "names": "GetNestedPath(doc, path) r",
+        "types": "GetNestedPath(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GetNestedPath",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "doc",
+            "path"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "RecurseForest",
+        "label": "RecurseForest(docs interface{}, idField string, parentField string, childField string, sortBy string) (r domain.FlowStepResult)",
+        "names": "RecurseForest(docs, idField, parentField, childField, sortBy) r",
+        "types": "RecurseForest(interface{}, string, string, string, string) domain.FlowStepResult",
+        "description": "Function with 5 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "RecurseForest",
+          "receiver_type": "*opsTransitions",
+          "num_in": 5,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "docs",
+            "idField",
+            "parentField",
+            "childField",
+            "sortBy"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Find",
+        "label": "Find(p *wf.WorkerSessionContext, arr interface{}, workflow string) (r domain.FlowStepResult)",
+        "names": "Find(p, arr, workflow) r",
+        "types": "Find(*wf.WorkerSessionContext, interface{}, string) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Find",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumBucket",
+        "label": "GroupSumBucket(arr interface{}, groupField string, groupLabelField string, bucketField string, bucketCount int, sumField string) (r domain.FlowStepResult)",
+        "names": "GroupSumBucket(arr, groupField, groupLabelField, bucketField, bucketCount, sumField) r",
+        "types": "GroupSumBucket(interface{}, string, string, string, int, string) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumBucket",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "int",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "groupField",
+            "groupLabelField",
+            "bucketField",
+            "bucketCount",
+            "sumField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumMulti",
+        "label": "GroupSumMulti(arr interface{}, groupField string, groupLabelField string, sumFields interface{}) (r domain.FlowStepResult)",
+        "names": "GroupSumMulti(arr, groupField, groupLabelField, sumFields) r",
+        "types": "GroupSumMulti(interface{}, string, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumMulti",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "groupField",
+            "groupLabelField",
+            "sumFields"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "GroupSumMatrix",
+        "label": "GroupSumMatrix(arr interface{}, rowField string, rowLabelField string, colField string, colLabelField string, sumField string) (r domain.FlowStepResult)",
+        "names": "GroupSumMatrix(arr, rowField, rowLabelField, colField, colLabelField, sumField) r",
+        "types": "GroupSumMatrix(interface{}, string, string, string, string, string) domain.FlowStepResult",
+        "description": "Function with 6 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "GroupSumMatrix",
+          "receiver_type": "*opsTransitions",
+          "num_in": 6,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "rowField",
+            "rowLabelField",
+            "colField",
+            "colLabelField",
+            "sumField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Recurse",
+        "label": "Recurse(p *wf.WorkerSessionContext, rootId string, childWorkflow string, childField string) (r domain.FlowStepResult)",
+        "names": "Recurse(p, rootId, childWorkflow, childField) r",
+        "types": "Recurse(*wf.WorkerSessionContext, string, string, string) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Recurse",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "rootId",
+            "childWorkflow",
+            "childField"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "RecurseForest",
+        "label": "RecurseForest(docs interface{}, idField string, parentField string, childField string, sortBy string) (r domain.FlowStepResult)",
+        "names": "RecurseForest(docs, idField, parentField, childField, sortBy) r",
+        "types": "RecurseForest(interface{}, string, string, string, string) domain.FlowStepResult",
+        "description": "Function with 5 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "RecurseForest",
+          "receiver_type": "*opsTransitions",
+          "num_in": 5,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "string",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "docs",
+            "idField",
+            "parentField",
+            "childField",
+            "sortBy"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Reduce",
+        "label": "Reduce(p *wf.WorkerSessionContext, arr interface{}, workflow string, init interface{}) (r domain.FlowStepResult)",
+        "names": "Reduce(p, arr, workflow, init) r",
+        "types": "Reduce(*wf.WorkerSessionContext, interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Reduce",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "*wf.WorkerSessionContext",
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "p",
+            "arr",
+            "workflow",
+            "init"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "RemoveWhere",
+        "label": "RemoveWhere(arr interface{}, field string, value interface{}) (r domain.FlowStepResult)",
+        "names": "RemoveWhere(arr, field, value) r",
+        "types": "RemoveWhere(interface{}, string, interface{}) domain.FlowStepResult",
+        "description": "Function with 3 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "RemoveWhere",
+          "receiver_type": "*opsTransitions",
+          "num_in": 3,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "interface{}"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field",
+            "value"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SelectMostRecentDated",
+        "label": "SelectMostRecentDated(arr interface{}, dateField string, targetDate string, useCurrent bool) (r domain.FlowStepResult)",
+        "names": "SelectMostRecentDated(arr, dateField, targetDate, useCurrent) r",
+        "types": "SelectMostRecentDated(interface{}, string, string, bool) domain.FlowStepResult",
+        "description": "Function with 4 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SelectMostRecentDated",
+          "receiver_type": "*opsTransitions",
+          "num_in": 4,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string",
+            "string",
+            "bool"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "dateField",
+            "targetDate",
+            "useCurrent"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SortBy",
+        "label": "SortBy(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "SortBy(arr, field) r",
+        "types": "SortBy(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SortBy",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "SortByDesc",
+        "label": "SortByDesc(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "SortByDesc(arr, field) r",
+        "types": "SortByDesc(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "SortByDesc",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      },
+      {
+        "value": "Sum",
+        "label": "Sum(arr interface{}, field string) (r domain.FlowStepResult)",
+        "names": "Sum(arr, field) r",
+        "types": "Sum(interface{}, string) domain.FlowStepResult",
+        "description": "Function with 2 input(s) and 1 output(s)",
+        "method": {
+          "go_module": "github.com/acme-kuetix/acme-std-collections",
+          "file_path": "modules/collections/ops/transitions/ops.go",
+          "module_path": "modules",
+          "namespace": "collections/ops",
+          "class": "ops",
+          "name": "Sum",
+          "receiver_type": "*opsTransitions",
+          "num_in": 2,
+          "num_out": 1,
+          "arg_types": [
+            "interface{}",
+            "string"
+          ],
+          "return_types": [
+            "domain.FlowStepResult"
+          ],
+          "arg_names": [
+            "arr",
+            "field"
+          ],
+          "return_names": [
+            "r"
+          ]
+        }
+      }
+    ]
+  }
+}

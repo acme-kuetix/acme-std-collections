@@ -1,0 +1,42 @@
+// Sub-workflow for collections/ops.Reduce: receives $element (a map with
+// "amount") and $accumulator (a map with "total"). Returns {accumulator: {total: <new sum>}}.
+// Uses math/ops.Add because WSL has no inline arithmetic.
+// Used by reduce-demo.wsl.
+
+module sum_amount_reducer
+
+import math/ops
+import services/common
+
+workflow sum_amount_reducer {
+  start: AddAmount
+
+  state AddAmount {
+    action math/ops/ops.Add(
+      a: $accumulator.total,
+      b: $element.amount
+    ) as SumResult
+    on success -> Respond
+    on error -> Failed
+  }
+
+  state Respond {
+    action services/common/response.Response(
+      value: {
+        accumulator: {
+          total: $SumResult.response.result
+        }
+      },
+      statusCode: 200
+    ) as Result
+    end ok
+  }
+
+  state Failed {
+    action services/common/response.Response(
+      value: { message: "reducer failed" },
+      statusCode: 500
+    ) as ErrorResult
+    end fail
+  }
+}
